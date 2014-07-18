@@ -1,0 +1,22 @@
+{
+	"name": "sloppy",
+	"version": "0.0.1",
+	"author": "David Ulrich <dvulrich47@gmail.com>",
+	"description": "A client/server utility for slopping data from one bucket to another.",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/dulrich/sloppy.git"
+	},
+	"keywords": [
+		"sloppy",
+		"slop",
+		"client/server",
+		"bucket"
+	],
+	"dependencies" : {
+		"async": ">=0.9.0",
+		"lodash": ">=2.4.1",
+		"socket.io": ">=1.0.6"
+	},
+	"license": "AGPL-3.0"
+}

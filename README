@@ -1,0 +1,16 @@
+# SLOPPY #
+
+A client/server utility for slopping data from one bucket to another.
+
+# Installation #
+
+Using npm: `npm install sloppy`
+
+Manual/git: `npm install` in the root sloppy directory
+
+You will need unix-odbc installed and configured to use the client with odbc 
+buckets on a *nix host.
+
+# License #
+
+AGPL v3 or later, see LICENSE.
