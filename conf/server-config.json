@@ -1,0 +1,14 @@
+{
+	"database": {
+		"type": "postgres",
+		"host": "127.0.0.1",
+		"port": 5432,
+		"user": "sloppy",
+		"pass": "bucket"
+	},
+	"server": {
+		"host": "127.0.0.1",
+		"name": "sloppy",
+		"port": 10864
+	}
+}

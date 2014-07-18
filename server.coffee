@@ -1,10 +1,15 @@
 _     = require 'lodash'
 async = require 'async'
-io    = require 'socket.io'
+fn    = require './lib/fn'
+sock  = require 'socket.io'
 
-require './lib/fn'
+conf  = require './conf/server-config.json'
+conf  = _.assign conf, fn.tryRequire './conf/server-config.local.json', {}, false
+
+
+process.on 'uncaughtException', fn.trapError
 
 
 
 
-
+io = new sock conf.server.port, {}
