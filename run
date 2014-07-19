@@ -1,0 +1,5 @@
+#!/bin/bash
+
+coffee -c client.coffee server.coffee lib/fn.coffee
+
+node $1
