@@ -2,4 +2,4 @@
 
 coffee -c client.coffee server.coffee lib/fn.coffee
 
-node $1
+DEBUG=* node $1.js

@@ -1,11 +1,17 @@
 fn = {}
 
+fn.getServerName = (conf) ->
+	"http://#{conf.server.host}:#{conf.server.port}";
+
 # call f if it is a function
 fn.iffn = (f,rest...) ->
 	if fn.isfn f then f.apply rest else null
 
 fn.isfn = (f) ->
 	return typeof f is 'function'
+
+fn.log = (conf,data) ->
+	console.log "#{data.event}: #{data}"
 
 fn.trapError = (err) ->
 	console.log "Unhandled exception: #{err}"
