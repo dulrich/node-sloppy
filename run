@@ -1,5 +1,6 @@
 #!/bin/bash
 
-coffee -c client.coffee server.coffee lib/fn.coffee
+coffee -c client.coffee server.coffee \
+	lib/fn.coffee lib/pool.coffee
 
 DEBUG=* node $1.js

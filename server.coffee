@@ -1,6 +1,8 @@
 _     = require 'lodash'
 async = require 'async'
 fn    = require './lib/fn'
+pool  = require './lib/pool'
+Q     = require 'q'
 sock  = require 'socket.io'
 
 conf  = require './conf/server-config.json'

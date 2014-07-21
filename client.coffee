@@ -1,8 +1,10 @@
 _     = require 'lodash'
 async = require 'async'
 fn    = require './lib/fn'
+pool  = require './lib/pool'
+Q     = require 'q'
 sock  = require 'socket.io-client'
-
+	
 conf  = require './conf/client-config.json'
 conf  = _.assign conf, fn.tryRequire './conf/client-config.local.json', {}, false
 
@@ -35,6 +37,11 @@ cfn.io.connect = (msg) ->
 	cfn.log 'io-connect', msg
 	io.emit 'identify', conf.client
 
+# the server has confirmed receipt of the data, remove it
+cfn.io.job_data = (msg) ->
+	cfn.log 'io-job-data', msg
+	## stub ##
+
 cfn.io.job_list = (msg) ->
 	cfn.log 'io-job-list', msg
 	cfn.set_jobs msg
@@ -43,4 +50,5 @@ cfn.io.job_list = (msg) ->
 io = sock fn.getServerName conf
 
 io.on 'connect', cfn.io.connect
+io.on 'job-data', cfn.io.job_data
 io.on 'job-list', cfn.io.job_list
