@@ -1,8 +1,9 @@
-# SLOPPY #
+# sloppy
 
 A client/server utility for slopping data from one bucket to another.
 
-# Installation #
+
+# setup
 
 Using npm: `npm install sloppy`
 
@@ -11,9 +12,10 @@ Manual/git: `npm install` in the root sloppy directory
 You will need unix-odbc installed and configured to use the client with odbc 
 buckets on a *nix host.
 
-# License #
 
-Copyright (C) 2014  David Ulrich (http://github.com/dulrich)
+# license
+
+Copyright (C) 2014 - 2015  David Ulrich (http://github.com/dulrich)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
