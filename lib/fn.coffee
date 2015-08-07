@@ -17,11 +17,19 @@
 fn = {}
 
 fn.getServerName = (conf) ->
-	"http://#{conf.server.host}:#{conf.server.port}";
+	"http://#{conf.server.host}:#{conf.server.port}"
+
+fn.array = (a) ->
+	if fn.isarray a then a
+	else if a? then [a]
+	else []
 
 # call f if it is a function
 fn.iffn = (f,rest...) ->
 	if fn.isfn f then f.apply rest else null
+
+fn.isarray = (a) ->
+	return a instanceof Array
 
 fn.isfn = (f) ->
 	return typeof f is 'function'
